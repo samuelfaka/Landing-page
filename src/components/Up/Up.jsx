@@ -12,10 +12,7 @@ const Up = () => {
     <div className='main'>
         <div>
             <div className='kill1'>
-              <picture>
-                  <source media='(max-width:767px)' srcSet={Img3} />
-                  <img src={Img4} alt="" />
-                 </picture>
+             
             </div>
             <div className='kill2'>
             <img src={Img5} alt="" />

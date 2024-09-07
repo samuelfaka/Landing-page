@@ -96,16 +96,7 @@
     }
   }
   
-  .kill1 {
-    position: absolute;
-    right: 0;
-    top: 10rem;
-    @media (max-width:767px) {
-      width: 50vw;
-      right: 0;
-      top: 53rem;
-    }
-  }
+ 
   
   .kill2 {
     position: absolute;
