@@ -4,7 +4,6 @@ import "./main";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Hero from './components/Hero/hero';
 import Info from './components/intro/Info';
 import Banner from './components/Banner/Banner';
 
@@ -13,7 +12,6 @@ const App = () => {
     <div>
       <Router>
       <Header />
-      <Hero />
       <Info />
         <Routes>
           <Route path='/' element={  <Home />} />
