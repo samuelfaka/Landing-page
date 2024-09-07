@@ -1,18 +1,24 @@
 import React from 'react'
-import Home from "./Pages/Home/home"
+import Home from "./components/Pages/home/home"
 import "./main";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Hero from './components/Hero/hero';
+import Info from './components/intro/Info';
+import Banner from './components/Banner/Banner';
 
 const App = () => {
   return (
     <div>
       <Router>
       <Header />
+      <Hero />
+      <Info />
         <Routes>
           <Route path='/' element={  <Home />} />
         </Routes>
+        <Banner />
         <Footer />  
       </Router>
       
