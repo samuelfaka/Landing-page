@@ -1,0 +1,104 @@
+
+:root {
+    --background-color-light: white;
+    --background-color-dark: gray;
+    --text-color-light: black;
+    --text-color-dark: white;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    box-shadow: 2px 2px 2px rgb(208, 205, 205);
+    animation: colorChange 6s ease-in-out infinite;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        position: relative;
+        z-index: 999;
+        width: 100%;
+
+        img {
+            max-width: 15rem;
+        }
+
+        .nav-items {
+            cursor: pointer;
+            display: flex;
+            width: 50%;
+            max-width: 40rem;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+                font-size: 19px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-style: italic;
+                font-weight: lighter;
+                color: inherit; 
+            }
+
+            .btn {
+                background-color: transparent;
+                border: 1px solid rgb(209, 202, 202);
+                text-align: center;
+                width: 10vw;
+                padding: 5px;
+                color: inherit;
+                
+                @media (max-width: 767px) {
+                    width: 40vw;
+                    padding: 10px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                display: none;
+
+                &.active {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    width: 100%;
+                    max-width: 100%;
+                    z-index: 999;
+                    background-color: rgb(18, 3, 18);
+                    height: 35vh;
+                    margin: auto;
+                    left: 0;
+                    padding: 2rem 0;
+                    top: 4rem;
+                    color: white;
+                }
+            }
+        }
+
+        .hamburger {
+            display: none;
+
+            @media (max-width: 767px) {
+                display: block;
+            }
+        }
+    }
+}
+
+
+@keyframes colorChange {
+    0% {
+        background-color: var(--background-color-light);
+        color: var(--text-color-light);
+    }
+    50% {
+        background-color: var(--background-color-dark);
+        color: var(--text-color-dark);
+    }
+    100% {
+        background-color: var(--background-color-light);
+        color: var(--text-color-light);
+    }
+}
